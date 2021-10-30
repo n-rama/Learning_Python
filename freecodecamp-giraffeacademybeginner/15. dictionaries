@@ -1,0 +1,23 @@
+# DICTIONAIRES
+# allows you to store information as key value pairs
+
+# create a program that converts an abbreviated month name into the full month name
+monthConversions ={  # first give the dictionary a name, dictionaries are stored within {}
+    "Jan": "January",  # unique key: corresponding value,  keys can be strings or numbers
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sep": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December"
+}
+
+# access entries within the dictionary
+print(monthConversions["Nov"])  # print corresponding value of unique key within []
+print(monthConversions.get("Dec"))  # using the .get function
+print(monthConversions.get("test", "not a unique key"))  # create a default value when a unique key does not match
