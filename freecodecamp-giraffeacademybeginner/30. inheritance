@@ -1,0 +1,24 @@
+# INHERITANCE
+
+# define attributes and functions of a class and then create a new class than can inherit all of this
+
+class Chef:
+    def make_chicken(self):
+        print("The chef makes a chicken")
+    def make_salad(self):
+        print("The chef makes a salad")
+    def make_special_dish(self):
+        print("The chef makes bbq ribs")
+
+myChef = Chef()
+myChef.make_special_dish()
+
+# create a new class with the functions of another class
+class ChineseChef(Chef):  # (name of other class)
+    def make_fried_rice(self):
+        print("The chef makes fried rice")
+    def make_special_dish(self):  # a function from another class can be redefined for a new class
+        print("The chef makes orange chicken")
+
+myChineseChef = ChineseChef()
+myChineseChef.make_special_dish()
