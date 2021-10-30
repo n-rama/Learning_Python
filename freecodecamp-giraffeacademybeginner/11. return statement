@@ -1,0 +1,9 @@
+# RETURN STATEMENT
+# getting information from a function
+
+def cube(num):
+    return num * num * num  # return gives the value of the function, no code can be added to the function after the return statement
+
+
+result = cube(4)  # the variable, result, stores the value of the function
+print(result)
