@@ -1,0 +1,17 @@
+# MODULES & PIP
+
+# modules are an imported python file
+
+import useful_tools  # import filename
+
+print(useful_tools.roll_dice(10))  # external file name.function
+
+# a broad list of modules are available in the official pythin documentation
+# https://docs.python.org/3/py-modindex.html
+# third party modules are also available online
+
+# pip is preferred installer program and is a package manager
+# it allows for the installation of third-party, external, modules
+# need to download pip and use the terminal on a mac
+# will be stored in lib folder, sub-folder called site packages
+# external packages can be uninstalled in the mac terminal
