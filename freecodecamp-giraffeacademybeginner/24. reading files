@@ -1,0 +1,17 @@
+# READING FILES
+
+# store the external file as a variable
+employee_file = open("24.a employees", "r")  # r to read the contents, w to edit information, a to append information at the end, r+ to read and write
+print(employee_file.readable())  # .readable to check if the file can be read, this checks if its r or r+ when opening the file
+print(employee_file.read)  # returns the whole file
+print(employee_file.readline())  # reads the first line
+print(employee_file.readline())  # reads subsequent lines
+print(employee_file.readlines()) # returns the contents of the file in a list
+print(employee_file.readlines()[1]) # returns the index of the context of a file
+employee_file.close()  # .close to close the file when done
+
+# for loops can also be used to return contents of a file
+employee_file2 = open("24.a employees", "r")
+for employee in employee_file2.readlines():
+    print(employee)
+employee_file2.close()
