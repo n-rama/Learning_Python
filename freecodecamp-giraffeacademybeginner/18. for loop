@@ -1,0 +1,28 @@
+# FOR LOOP
+
+for letter in "Giraffe Academy":  # for every letter [variable] in Giraffe Academy [string], do something. Specify a variable that represents a different value in each loop
+    print(letter) # this will print each letter of Giraffe Academy in turn
+
+# for loops also work with arrays
+friends = ["Jim", "Karen", "Kevin"]
+for friend in friends:  # friend is a new variable that defines each element of the array
+    print(friend)
+
+# the range to loop can be defined in the for loop structure
+for index in range(10):
+    print(index)  # this will print 0-9
+
+# a range of numbers can also be specified
+for index1 in range(3, 10):
+    print(index1)  # this will print 3-9
+
+# loop through a previously defined range with the len function
+for index2 in range(len(friends)):
+    print(friends[index2])  # note how the range has to be included in the print statement. This will print the names of the friends
+
+# additional logic can be applied within a for loop
+for index in range(5):
+    if index == 0:
+        print("first iteration")  # this will be printed on the first iteration
+    else:
+        print("not first iteration")  # this will be printed on all subsequent iterations
