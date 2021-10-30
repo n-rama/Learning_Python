@@ -1,0 +1,7 @@
+# INPUTS
+
+# getting inputs from elsewhere
+
+name = input("Enter your name: ")  # this provides instructions for the user
+age = input("Enter your age: ")
+print("Hello " + name + "! You are " + age)
