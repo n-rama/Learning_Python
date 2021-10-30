@@ -1,0 +1,9 @@
+# WHILE LOOP
+# allows to execute a block of code multiple times until a certain condition is false
+
+i = 1  # create an integer
+while i<=10:  # the code will continue to execute if this condition is true and stop when this condition is false
+    print (i)
+    i += 1  # shorthand for i = i + 1
+
+print ("Done with loop")
