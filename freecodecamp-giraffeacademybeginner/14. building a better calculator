@@ -1,0 +1,19 @@
+# BUILDING A BETTER CALCULATOR
+# allow the user to select from a range of operations
+
+# first, get input from the user
+num1 = float(input("Enter first number: "))
+op = input("Enter operator")
+num2 = float(input("Enter another number: "))
+
+# use an if statement to determine the operator the user has selected
+if op == "+":
+    print(num1 + num2)
+elif op == "-":
+    print(num1 - num2)
+elif op == "/":
+    print(num1 / num2)
+elif op =="*":
+    print(num1 * num2)
+else:
+    print("Invalid operator")
