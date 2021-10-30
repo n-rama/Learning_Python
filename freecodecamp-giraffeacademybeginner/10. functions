@@ -1,0 +1,16 @@
+# FUNCTIONS
+# a collection of code that performs a specific task
+
+# create a function that greets the user
+def say_hi(name, age): #def to begin function development, same of the function and then add ():, the () can include parameters
+    print("Hello " + name + " you are " + age)
+
+# def [name of function](function parameters):
+    # what the function does when called
+
+# to execute a function it must be called
+# functions can be given information, called parameters
+# when a function is called, all the code within a function is executed
+# a function input can be a mix of both strings and integers, however the print statement in the function will have to convert the integer into a string by using str(parameter)
+say_hi("Mike", "35")
+say_hi("Steve", "70")
