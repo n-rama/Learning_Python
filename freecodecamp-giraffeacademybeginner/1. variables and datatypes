@@ -1,22 +1,12 @@
 #VARIABLES AND DATATYPES
 
-#ESCAPE
-print("Giraffe\nAcademy") #\n = new line
-print("Giraffe\rAcademy") #\ = exit and follow the command of what's after the \, these commands are often shortcuts
+character_name = "Tom"
+character_age = str(50) #I used the str() function to convert an the integer into a string to print the code, there may be a better way to do this#
 
-#CREATE VARIABLE
-phrase ="Giraffe Academy"
-print(phrase)
+is_Male = True
+print("There once was " +character_name + ",")
+print("he was " +character_age)
 
-#CONCATENATE
-print(phrase + " is cool")
-
-#FUNCTION - BLOCK OF CODE IN A STRING, LIKE AN EXCEL FORMULA
-print(phrase.lower())
-print(phrase.upper())
-print(phrase.isupper())
-print(phrase.upper().isupper())
-print(len(phrase))
-print(phrase[0]) #strings are indexed starting at 0, not 1
-print(phrase.index("Academy")) #a value given to a function is a parameter
-print(phrase.replace("Giraffe","Elephant")) #what to replace, what to replace it with
+character_name = "Mike"
+print("He liked being called " +character_name + ",")
+print("but didn't like being " +character_age)
