@@ -1,0 +1,20 @@
+# BUILDING A GUESSING GAME
+
+secret_word = "giraffe"  # create the secret word
+guess = ""  # store the user's entries
+guess_count = 0  # how many times the user has guessed a word
+guess_limit = 3  # maximum number of guesses
+out_of_guesses = False
+
+# prompt the user to enter another word if the guess is incorrect
+while guess != secret_word and not(out_of_guesses):  # if the guess is incorrect and the limit has not been reached the while loop will run
+    if guess_count < guess_limit:  # checks that the guess limit has not been reached
+        guess = input("Enter guess: ")  # asks for a new guess
+        guess_count += 1  # adds 1 to the total number of guesses
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:  # determines what to print. Note how we can reference the 'out_of_guesses' as it is a boolean
+    print("Out of guesses, you lose!")
+else:
+    print("You win!")
