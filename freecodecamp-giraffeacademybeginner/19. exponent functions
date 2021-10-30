@@ -1,0 +1,13 @@
+# EXPONENT FUNCTIONS
+# ** represents ^
+
+print(2**3)
+
+# an exponent can be found from a function
+def raise_to_power(base_num, pow_num):
+    result = 1
+    for index in range(pow_num):  # the base_num needs to be multiplied by itself at the number of times given in the pow_num
+        result = result * base_num # the first loop does 1 (result) * base_num, this then becomes the result. The next loop multiplies this new result (i.e., base_num * 1) by base_num, therefore squaring the number, and so on
+        return result
+
+    print(raise_to_power(3, 2))  # the first number is base_num, the second number is pow_num
