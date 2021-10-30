@@ -1,2 +1,2 @@
 # Learning_Python
-Random collection of notes as I learn Python, questions are not owned my me. No infringment intended
+A collection of notes from various sources as I learn Python, materials are not owned my me. No infringment intended
