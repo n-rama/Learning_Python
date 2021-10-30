@@ -1,0 +1,31 @@
+# IF STATEMENTS
+# respond to the inputs given and make a decision
+
+is_male = True  # this is a boolean variable, i.e., True or False
+is_tall = False
+if is_male:  # this is the condition
+    print("You are a male")  # condition is true
+else:
+    print("You are a female") # condition is false
+
+# if or conditions
+if is_male or is_tall:  # condition will be true if one or more are true
+    print("You are male or tall or both")
+else:
+    print("You are neither male or tall")
+
+# if and conditions
+if is_male and is_tall:  # this condition will be true if both are true
+    print("You are a tall male")
+else:
+    print("You are either not male or not tall or both")
+
+# elseif, written as elif, conditions, similar to embedded if statements in Excel
+if is_male and is_tall:
+    print("You are a tall male")
+elif is_male and not is_tall:
+    print("You are a short male")
+elif not(is_male) and is_tall:
+    print("You are not a male but are tall")
+else:
+    print("You are either not male and not tall")
