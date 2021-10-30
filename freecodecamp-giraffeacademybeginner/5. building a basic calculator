@@ -1,0 +1,13 @@
+# CREATING A CALCULATOR
+# build a simple calculator that gets two inputs from the user and adds them together
+
+# create two variables to add together
+
+
+num1 = input("Enter a number: ")
+num2 = input("Enter another number: ")
+
+# the default input data type is a string, this has to be converted to a number
+# int() only allows for whole numbers i.e., integers. float() allows for decimals also
+result = float(num1) + float(num2)
+print(result)
