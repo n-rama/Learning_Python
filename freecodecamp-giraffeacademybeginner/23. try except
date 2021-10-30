@@ -1,0 +1,22 @@
+# TRY EXCEPT
+# helps to catch errors in code
+
+number = int(input("Enter a number: "))  # if an integer is not entered, the code will return an error
+print(number)
+
+# with try, the code can be tested and if there is an error it will do something else, similar to IFERROR in Excel
+try:  # test original code
+    number = int(input("Enter a number: "))
+    print(number)
+except:  # iferror then do this,
+    print("Invalid input")
+
+# except only specific errors, this can be useful to return different results for certain errors
+try:
+    value = 10 / 0
+    number = int(input("Enter a number: "))
+    print(number)
+except ZeroDivisionError as err:  # as to store the error as a variable
+    print(err)
+except ValueError:
+    print("invalid input")
