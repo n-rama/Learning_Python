@@ -1,0 +1,17 @@
+# LISTS
+
+# give the list a descriptive name
+# lists are stored in square brackets
+# strings, numbers, and boolean can be stored in a list
+friends = ["Kevin", "Karen", "Jim", "Oscar", "Toby"]
+
+#modifying the list after it has been created
+friends[1] = "Mike"
+
+# how to access the list and items in the list
+# list indexes begin from 0
+print(friends)
+print(friends[0])  # returns index result
+print(friends[-1])  # returns index starting at the end of the list, note how it begins at -1 in reverse
+print(friends[1:])  # returns result of the index and all results after
+print(friends[1:3])  # returns range of results, note it does not return the result at the last index number
