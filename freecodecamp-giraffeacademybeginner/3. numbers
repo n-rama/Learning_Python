@@ -1,0 +1,35 @@
+# NUMBERS
+
+# numbers do not need quotation marks
+print(2)
+print(2.54656)
+print(-2.68765)
+print(3 * 4)
+print(3 * 4 + 5)
+print(3 * (4 + 5))  # bidmas applies to number calculations
+print(10 % 3)  # same as Excel's MOD function, gives the remainder after division
+
+# STORING NUMBERS WITHIN VARIABLES
+my_num = 5
+print(my_num)
+
+# CONVERT NUMBER TO STRING
+# this is needed to print numbers along with strings
+print(str(my_num) + " is five")
+
+# FUNCTIONS
+my_num = -5
+print(abs(my_num))
+print(pow(3, 2))
+print(max(4, 6))
+print(min(4, 6))
+print(round(3.2))
+print(round(3.7))
+
+# IMPORTING
+from math import *  # the imported item is called a module
+
+print(floor(3.7))  # round up
+print(ceil(3.2))  # round down
+print(sqrt(36))
+
