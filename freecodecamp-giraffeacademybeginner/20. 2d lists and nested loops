@@ -1,0 +1,20 @@
+# 2D LISTS AND NESTED LOOPS
+
+number_grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [0]
+]  # this creates a grid with four rows and three columns
+
+# access the list structure
+print(number_grid[2][1]) # [row index][column index]
+
+# to return the list in the original structure
+for row in number_grid:
+    print(row)
+
+# a nested for loop is needed to return the individual elements of the grid
+for row in number_grid:
+    for col in row:  # selects each column of each row (array) in the list, i.e., one element
+        print(col)  # returns the selected element
