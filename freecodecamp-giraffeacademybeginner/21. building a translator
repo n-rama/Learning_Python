@@ -1,0 +1,20 @@
+# BUILDING A TRANSLATOR
+
+# Giraffe Language
+# vowels -> g
+
+# define the translate function
+def translate(phrase):  # function name and function variable
+    translation  = ""  # empty variable for the translation
+    for letter in phrase: # define each element of the phrase as a letter
+        if letter.lower() in "aeiou":  # makes the letters lowercase and check if each letter (element) of the phrase matches a range
+            if letter.isupper():
+                translation = translation + "G"  # this converts the letter matches to a G
+            else:
+                translation = translation + "g"  # this converts the letter matches to a g
+        else:
+            translation = translation + letter  # this returns the original phrase, as the translation was earlier defined as blank, it returns only the letter elements of the phrase
+    return translation
+
+print(translate(input("Enter a phrase: ")))
+
