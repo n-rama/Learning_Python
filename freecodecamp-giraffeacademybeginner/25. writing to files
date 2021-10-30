@@ -1,0 +1,28 @@
+# WRITING TO FILES
+
+# appending adds to the end of the file
+employee_file = open("24.a employees", "a")
+employee_file.write("test 5")  # every time the code is run, the same string will be appended on the same line
+employee_file.close()
+
+# add a variable on a new line
+employee_file = open("24.a employees", "a")
+employee_file.write("\ntest 6")  # use the escape character for a new line (\n) for a new line
+employee_file.close()
+
+
+# writing overwrites the whole file
+employee_file2 = open("24.a employees", "w")
+employee_file2.write("test 7")
+employee_file2.close()
+
+
+# create a new file
+employee_file2 = open("25.a employees1", "w")  # the open file name is a new name, therefore a new file will be created
+employee_file2.write("test 8")
+employee_file2.close()
+
+# different file types can be created as new files
+#  xx = open("yy.filetype", "w")  # files types can be txt, HTML, and others
+#  xx.write("<p>This is HTML<\p>")  # HTML example. THis is how websites are created in Python
+#  xx.close()
