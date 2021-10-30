@@ -1,0 +1,8 @@
+# COMMENTS
+# the comment line is not executed or printed
+# the comment starts with #
+
+# using a triple quotation mark creates multi-line comments
+'''test
+test1
+test2'''
