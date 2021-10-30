@@ -1,0 +1,40 @@
+# LIST FUNCTIONS
+
+lucky_numbers = [42, 8, 15, 16, 23]
+friends = ["Kevin", "Karen", "Jim", "Jim", "Oscar", "Toby"]
+
+# .append adds elements at the end of the list
+friends.extend(lucky_numbers)  # a variable can be appended to a list
+friends.append("Creed")  # individual elements can be appended to a list
+
+# .insert adds elements at an index in the list
+friends.insert(1, "Kelly")  # selects the desired index position of the new element and adds it
+
+# .remove to delete an element from the list
+friends.remove("Jim")
+
+# .pop to remove the last element of the list
+friends.pop()
+
+# .index to find the index number of an element in the list
+print(friends.index("Kevin"))
+
+# .count to know how many times an element appears in the list
+print(friends.count("Jim"))
+
+# .sort to rearrange the list in descending order, note cannot be a mix of strings and integers
+lucky_numbers.sort()
+print(lucky_numbers)
+
+# .reverse to fully reverse a list
+lucky_numbers.reverse()
+print(lucky_numbers)
+
+# .copy to create a new variable that copies an existing list
+friends2 = friends.copy()
+print(friends2)
+
+# .clear to delete all elements from the list
+# friends.clear()
+
+print(friends)
