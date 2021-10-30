@@ -1,0 +1,22 @@
+#VARIABLES AND DATATYPES
+
+#ESCAPE
+print("Giraffe\nAcademy") #\n = new line
+print("Giraffe\rAcademy") #\ = exit and follow the command of what's after the \, these commands are often shortcuts
+
+#CREATE VARIABLE
+phrase ="Giraffe Academy"
+print(phrase)
+
+#CONCATENATE
+print(phrase + " is cool")
+
+#FUNCTION - BLOCK OF CODE IN A STRING, LIKE AN EXCEL FORMULA
+print(phrase.lower())
+print(phrase.upper())
+print(phrase.isupper())
+print(phrase.upper().isupper())
+print(len(phrase))
+print(phrase[0]) #strings are indexed starting at 0, not 1
+print(phrase.index("Academy")) #a value given to a function is a parameter
+print(phrase.replace("Giraffe","Elephant")) #what to replace, what to replace it with
