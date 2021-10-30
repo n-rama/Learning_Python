@@ -1,0 +1,16 @@
+# TUPLES
+# type of data structure that can store different values
+# tuples are stored in ()
+# tuples are immutable, i.e., they cannot be changed
+
+coordinates = (4, 5)
+print(coordinates)
+
+# data within a tuple can be accessed in a similar way to a list
+print(coordinates[0])  # [] to return an element based on the index value
+
+# a list of tuples can be created
+coordinates2 = [(1, 2), (3, 4)]
+print(coordinates2)
+print(coordinates2[0])
+print(coordinates2[-1])
