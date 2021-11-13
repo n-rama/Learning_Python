@@ -1,0 +1,95 @@
+# Lists: ordered, mutable, allows duplicate elements
+mylist = ["banana", "cherry", "apple"]  # lists are created in square brackets
+print(mylist)
+
+mylist2 = list()  # new list can be created from another list
+print(mylist2)
+
+mylist3 = [5, True, "apple"]  # a list can contain multiple data types
+print(mylist3)
+
+mylist4 = ["apple", "apple", "orange"]  # a list can contain duplicates
+print(mylist4)
+
+mylist5 = [-1, 1, 4, -7, 11, 4]
+
+#  accessing list items
+item = mylist[0]
+print(item)
+
+item2 = mylist[-1]
+print(item2)
+
+for i in mylist:  # print everything in the list with a for loop
+    print(i)
+
+# check if an item is in the list
+if "banana" in mylist:
+    print("yes")
+else:
+    print("no")
+
+# check how many elements within a list
+print(len(mylist))
+
+# append items to a list
+mylist.append("lemon")  # .append to add an element to the end of the list
+
+mylist.insert(1, "blueberry")  # .insert to specify the index for the new element
+print(mylist)
+
+# remove items from a list
+item = mylist.pop()  # .pop removes the last item of a list, it can also be made its own variable
+print(item)
+
+mylist.remove("cherry")  # .remove to remove a specified element
+print(mylist)
+
+# mylist.clear()  # .clear to empty the list
+# print(mylist)
+
+# reverse a list
+mylist2.reverse()  # .reverse to reverse a list
+print(mylist3)
+
+# sort a list
+# mylist5.sort()  # .sort will put a list in ascending numerical or alphabetical order. It changes the order of the original list
+print(mylist5)
+
+newlist = sorted(mylist5)  # x = sorted() to order an existing list as a new list, leaving the original unchanged
+print(newlist)
+
+# create a new list with the same element multiple times
+mylist6 = [0] * 5
+print(mylist6)
+
+# combine two lists
+newlist2 = mylist + mylist4
+print(newlist2)
+
+# access subparts of a list
+print(mylist5[1:5])  # print from same list
+print(mylist5[:5])
+print(mylist[1:])
+
+newlist3 = mylist5[1:5]  # create as a new list
+print(newlist3)
+
+print(mylist5[::2])  # ::number to define a step interval when returning a list, the default is 1
+# print(mylist[::-1])  # a list can also be reversed with ::-1
+
+# copying a list
+mylist_copy = mylist.copy() # .copy for a new list assigned to a variable
+print(mylist_copy)
+
+mylist_copy2 = list(mylist)  # since we created the list() function earlier, it can be used to create a new list
+print(mylist_copy2)
+
+mylist_copy3 = mylist[:]  # slicing the whole list with [:] to a new variable also copies a list
+print(mylist_copy3)
+
+# functions and create a new list
+mylist5_sqrd = [i*i for i in mylist5]
+print(mylist5_sqrd)
+
+print(mylist5)
