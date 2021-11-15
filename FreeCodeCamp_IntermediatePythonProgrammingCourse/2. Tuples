@@ -1,0 +1,72 @@
+# Tuple: ordered, immutable, allows duplicate elements
+mytuple = ("Max", 28, "Boston")  # if there is only one element in a tuple, it has to have a comma after it or it will be recognised as a strong
+print(mytuple)
+
+# creating a tuple from a list
+mytuple2 = tuple(["John,", 29, "New York"])
+print(mytuple2)
+
+# access elements in a tuple
+item = mytuple[1]
+print(item)
+
+item2 = mytuple2[-2]
+print(item2)
+
+# iterating through a tuple with a forr in loop
+for i in mytuple:
+    print(i)
+
+# check if an element is within a tuple
+if "Max" in mytuple:
+    print("Yes")
+else:
+    print("No")
+
+# get the number of elements within a tuple
+print(len(mytuple))
+
+# count elements within a tuple
+print(mytuple.count("Max"))
+
+# find the index of a specific element
+mytuple.index("Max")
+
+# convert a tuple to a list
+mylist = list(mytuple)
+print(mylist)
+
+# convert a list to a tuple
+mytuple3 = tuple(mylist)
+print(mytuple3)
+
+# slicing a tuple to access certain items
+mytuple4 = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+print(mytuple4[2:5])  # elements two to four
+print(mytuple4[:5])  # elements zero to four
+print(mytuple4[4:])  # elements four onwards
+print(mytuple4[::2])  # every second element
+print(mytuple4[::-1])  #reverse elements
+
+# unpack a tuple to strings
+name, age, city = mytuple
+print(name)
+print(age)
+print(city)
+
+n1, *n2, n3 = mytuple4  # separates the first and the last elements and groups the others into a list
+print(n1)
+print(n2)  # the * is not needed when calling the intermediate variable (n2 in this example)
+print(n3)
+
+# working with tuples can be more efficient than working with lists
+import sys
+mylist2 = [0, 1, 2 , "hello", True]
+mytuple5 = [0, 1, 2 , "hello", True]
+print(sys.getsizeof(mylist2), "bytes")  # how much processing power to run this
+print(sys.getsizeof(mytuple5), "bytes")
+
+import timeit
+print(timeit.timeit(stmt="[0, 1, 2, 3, 4, 5]", number=1000000))  # how long it takes to run this
+print(timeit.timeit(stmt="(0, 1, 2, 3, 4, 5)", number=1000000))
