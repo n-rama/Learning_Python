@@ -1,0 +1,75 @@
+# Dictionary: Key-Value pairs, unordered, mutable
+
+mydictionary = {"name": "Max", "age": 28, "city": "New York"}  # dictionaries wre in {}
+print(mydictionary)
+
+# can use the dict function to create a dictionary
+mydictionary2 = dict(name="Mary", age=27, city="Boston")  # there are no " " for the keys and the Key-Value separator is a = instead of a :
+print(mydictionary2)
+
+# accessing values in a dictionary
+value = mydictionary["name"]
+print(value)
+
+# adding a Key-Value pair after a dictionary has been created, if a Key has already been created it will be overwritten
+mydictionary["email"] = "max@xyz.com"
+print(mydictionary)
+
+# delete items
+del mydictionary["name"]
+print(mydictionary)
+
+# mydictionary.pop("age")
+# print(mydictionary)
+
+# mydictionary.popitem()  # removed the last item
+# print(mydictionary)
+
+# check if a key is within a dictionary
+if "name" in mydictionary:
+    print(mydictionary["name"])
+else:
+    print("Not a Key")
+
+try:
+    print(mydictionary["city"])
+except:
+    print("Not a Key")
+
+# loop through a dictionary and return Keys and Values
+for key in mydictionary:  # returns the Keys
+    print(key)
+
+for key in mydictionary.keys():  # returns the Keys
+    print(key)
+
+for value in mydictionary.values():  # returns the Values
+    print(value)
+
+for key, value in mydictionary.items():  # returns the Keys and Values
+    print(key, value)
+
+# copying a dictionary
+mydictionary_copy = mydictionary.copy()
+print(mydictionary_copy)
+
+mydictionary2_copy = dict(mydictionary2)
+print(mydictionary2_copy)
+
+# merge two dictionaries
+mydictionary.update(mydictionary2)  # where a Key already exists in mydictionary, it will be updated with the Value from mydictionary2 and unique Keys from mydictionary2 will be added to mydictionary
+print(mydictionary)
+
+# integer data type as Keys
+mydictionary3 = {3: 9, 6: 36, 9: 81}
+print(mydictionary3)
+
+value1 = mydictionary3[3]  # when accessing Values if the Keys are integers, the index number needs to be the actual Key integer, not the position of the Key in the dictionary
+print(value1)
+
+# tuple data type as Keys
+mytuple = (8, 7)
+mydictionary4 = {mytuple: 15}
+print(mydictionary4)
+
+# lists cannot be used as Keys, as lists are mutable, whereas Keys cannot be. Keys must be hashable meaning its value cannot change
