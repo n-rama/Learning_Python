@@ -1,0 +1,101 @@
+# Sets: unordered, mutable, no duplicates
+myset= {1, 2, 3}
+print(myset)
+
+myset2 = set([1, 2, 3])
+print(myset2)
+
+myset3 = set("Hello")
+print(myset3)  # the order of letters when printed will change each time, as a set is unordered. Also, only one 'l' will print as there cannot be any duplicates
+
+# create an empty set
+myset4 = set()
+print(type(myset4))
+
+# adding to a set
+myset4.add(1)
+myset4.add(2)
+myset4.add(3)
+
+print(myset4)
+
+# removing from a set
+myset4.remove(3)
+print(myset4)
+
+myset4.discard(4)  #.discard will not return an error if the value is not found in a list, whereas .remove will
+print(myset4)
+
+# myset4.clear() # .clear to empty a set
+# print(myset4)
+
+print(myset4.pop())  # removes a value and prints what has been removed
+print(myset4)
+
+# iterate over a set
+for i in myset:
+    print(myset)
+
+# check if a value is within a set
+if 1 in myset:
+    print("Yes")
+else:
+    print("No")
+
+# unions combine elements from two sets without duplication. similar to Excel OR formula
+odds = {1, 3, 5, 7, 9}
+evens = {0, 2, 4, 6, 8}
+primes = {2, 3, 5, 7}
+
+u = odds.union(evens)  # this combines odds with evens
+print(u)
+
+# intersection on takes elements that are found in both sets. similar to Excel AND formula
+i = odds.intersection(evens)
+print(i)  # there are no overlapping elements, therefore this is an empty set
+
+# differences between sets
+setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+setB = {1, 2, 3, 10, 11, 12}
+
+diff = setA.difference(setB)  # this returns the elements from setA that are not in setB
+print(diff)
+
+diff2 = setB.symmetric_difference(setA)  # .symmetric_difference returns the unique values from both setA and setB
+print(diff2)
+
+# modify sets
+setA.update(setB)  # this adds the elements of setB to setA
+print(setA)
+
+setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+setA.intersection_update(setB)  # .intersection_update includes only the elements that are found in both sets
+print(setA)
+
+setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+setA.difference_update(setB)  #  .difference_update includes only the elements that are unique to setA, compared to setB
+print(setA)
+
+# subset
+setA = {1, 2, 3, 4, 5, 6}
+setB = {1, 2, 3}
+
+print(setA.issubset(setB))  # .issubset checks if all the elements of setA set are included in setB, if so then the set is considered a subset
+
+# superset
+print(setB.issuperset(setA))  # issuperset checks if all the elements of setB are included in setA and setA has no elements that are not included in setB
+
+# disjoin
+print(setA.isdisjoint(setB)) # .isdisjoin checks if there are no overlapping elements between two sets
+
+# copying a set
+setC = setA.copy()
+print(setC)
+
+setD= set(setA)
+print(setD)
+
+# forzen set
+frs = frozenset([1, 2, 3, 4])  # a frozenset cannot be changed after it has been created
+print(frs)
+# union, intersection, difference will still work as they do not change the original set
