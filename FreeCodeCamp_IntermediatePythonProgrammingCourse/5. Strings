@@ -1,0 +1,116 @@
+# Strings: ordered, immutable, text representation
+mystring = "Hello World"
+print(mystring)
+
+mystring2 = """Hello
+World"""
+print(mystring2)  # tripe quotation marks for multi-line strings
+
+# accessing parts of a string
+char = mystring[0]
+print(char)
+
+substring = mystring[1:5]
+print(substring)
+
+substring2 = mystring[::2]
+print(substring2)
+
+# concatenate strings
+greeting = "Hello"
+name = "Tom"
+sentence = greeting + " " + name
+print(sentence)
+
+# iterate over strings
+for i in greeting:
+    print(i)
+
+if "ell" in greeting:
+    print("Yes")
+else:
+    print("No")
+
+# remove leading and ending white space
+mystring3 = "     Hello World     "
+mystring3 = mystring3.strip()  # strings are immutable, therefore it has to be assigned to the edited string
+print(mystring3)
+
+# change all character cases of a string
+print(mystring3.upper())
+print(mystring3.lower())
+
+# check if a string starts or ends with a specific character or substring
+print(mystring.startswith("H"))
+print(mystring.endswith("d"))
+
+# find the first index of a character or substring or a substring
+print(mystring.find("o"))
+print(mystring.find("z")) # will return -1 if nothing is found
+
+# count the number of certain characters or substrings
+print(mystring.count("o"))
+print(mystring.count("p"))
+
+# replace characters or substrings
+print(mystring.replace("World", "Universe"))  # this does not change the original string. If there is an error in the code it will print the original string would any replacements
+print(mystring)
+
+# changing strings to lists
+mystring4 = "how are you today"
+mylist = mystring4.split()  # the default limiter is a space
+print(mylist)
+
+mystring5 = "how,are,you,today"
+mylist2 = mystring5.split(",")  # a delimiter must be defined if it is not a space
+print(mylist2)
+
+# convert a list back into a string
+mystring6 = " ".join(mylist)  # before the . is the limiter between elements of the list that we want to use for the string
+print(mystring6)
+
+mylist3 =["a"] * 6
+print(mylist3)
+
+## bad example as creates a new string and reassigns it to the variable. Can use the timeit package to show that this approach takes longer
+mystring7 = ""
+for i in mylist3:
+    mystring7 += i
+print(mystring7)
+
+## better approach
+mystring8 = "".join(mylist3)
+print(mystring8)
+
+# formatting strings
+## can use %, .format(), f-Strings
+
+### %
+var = "Tom"
+mystring9 = "the variable is %s" % var  # % is a placeholder %s is for text
+print(mystring9)
+
+var2 = 2
+mystring9 = "the variable is %d" % var2  # %d is for integers
+print(mystring9)
+
+var3 = 3.3433645451
+mystring10 = "the variable is %.2f" % var3  # %f is for floating points (decimals), by default there are six decimal places, to specify it is %. number of decimal places f
+print(mystring10)
+
+### .format()
+
+var4 = 4.28736297
+mystring11 = "the variable is {:.2f}".format(var4)  # to specify the number of decimal places use :. number of decimal places f
+print(mystring11)
+
+mystring12 = "the variables are {} and {:.2f}".format(var2,var4)
+print(mystring12)
+
+### f-Strings
+mystring13 = f"the variables are {var2} and {var4}"  # use f before the string and input the variable names of the placeholders directly in the string within the {}
+print(mystring13)
+
+#### operations can be added to the placeholder variables with f-Strings
+mystring14 = f"the variables are {var2*2} and {var4}"
+print(mystring14)
